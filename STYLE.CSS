@@ -102,6 +102,13 @@ width: 100%;
 {
     outline:none;
 }
+.header
+{
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0.5;
+}
 .image
 {
     position: absolute;
@@ -111,44 +118,33 @@ width: 100%;
     top: 0px;
     opacity: 0.7;
 }
-.header
+.grid_container
 {
-    color: #000000;
-    text-align: center;
-    margin-bottom: 30px;
-    opacity: 0.5;
-}
-.window_api
-{
-    width: 100%;
-    height:680px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    background-image: url("./aff1_promo_header.jpeg");
-    position: relative;
-    background-size: cover;
-}
-.hatab
-{
-    width: 100%;
+    width:100%;
     height: 680px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows:1fr 300px 300px;
+    background-image: url("./aff1_promo_header.jpeg");
+    background-size: cover;
+    justify-content: center;
+    align-content:space-between ;
     background-color: black;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    z-index: 4;
+    opacity: 0,9;
 }
 .window
 {
     width: 600px;
     height: 250px;
-    display: flex;
+    display: grid;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 6;
+    grid-row: 3;
+    grid-column: 2;
+    align-content:space-between ;
+    justify-content: center;
 }
 .title
 {
@@ -174,9 +170,9 @@ width: 100%;
 
 .button_2
 {
-    width: 250px ;
+    width: 100% ;
     height: 55px;
-    display: flex;
+    display:flex;
     justify-content:space-around;
 }
 .Sing
@@ -218,66 +214,54 @@ width: 100%;
     border:1px solid green;
     height: 54px;
 }
-.section_3
+.flex1
 {
     width: 100%;
-    height:  710px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section_3_container
-{
-    width: 970px;
-    height:  595px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;   
-}
-
-.section_3-header
-{
-    width: 970px;
-    height:  46px;
-    color: #2acd73;
-    font-family: preconnect;
-    font-size: 42px;
+    height: 360px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-
-.hr
+.grid_cont
 {
-    width: 75px;
-    height:  3px;
-    background-color: #30cd73;
+    width:80%;
+    display: grid;
+    width:repeat(2,360px);
+    height:repeat(3,360px);
+    grid-gap:10px;
 }
-
-.section_3-wrapper 
+.grid_cont>*
 {
-    width: 970px;
-    height:  178px;
-    color: #6a6c6f;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    justify-items: center;
+    align-self:center ;
 }
-
-.cd-md-4
+.one
 {
-    width: 334px;
-    height:  157px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; 
-} 
+ grid-column: 1/2;
+ grid-row: 1;
+}
+.two{
+ grid-column:2/3 ;
+ grid-row: 1;
+}
+.fhree{
+    grid-column: 3;
+    grid-row: 1;
+}
+.four{
+    grid-column: 1/2;
+    grid-row: 2;
+}
+.five
+{
+    grid-column:2/3 ;
+    grid-row: 2;
+}
+.six
+{
+    grid-column: 3;
+    grid-row: 2;
+}
 .cd-md-4-text
 {
     width: 303px;
@@ -290,73 +274,16 @@ width: 100%;
     font-size: 15px;
     align-items: flex-start; 
 }
-
-h3.cd-md-4
+.hr
 {
-    color: #000;
-    font-size: 22px;
-    font-family: preconnect;
-}
-
-.img-container
-{
-    width: 50px;
-    height:  50px;
+    width: 75px;
+    height:  3px;
+    background-color: #30cd73;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-.section_3-button 
-{
-    width: 970px;
-    height:  54px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;  
-}
-
-.btn_signup
-{
-    width: 100px;
-    height:  39px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;   
-    background-color: #ff0049;
-    font-size: 18px;
-    color: #fff;
-}
-
-/* секция 4 */
-
-.section_4
+.Publ
 {
     width: 100%;
-    height:  690px;
-    background-color: #f6f9fa;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section_4_container
-{
-    width: 574px;
-    height:  574px;
-    background-color: #f6f9fa;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;   
-}
-
-.section_4-header
-{
-    width: 970px;
     height:  46px;
     color: #2acd73;
     font-family: preconnect;
@@ -364,224 +291,10 @@ h3.cd-md-4
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-
-.section_4-wrapper 
-{
-    width: 970px;
-    height:  178px;
-    color: #6a6c6f;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.section_4-button 
-{
-    width: 970px;
-    height:  54px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;  
-}
-
-.btn_application
-{
-    width: 148px;
-    height:  39px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;   
-    background-color: #ff0049;
-    font-size: 18px;
-    color: #fff;
-}
-
-.btn_application:focus  .btn_signup:focus
-{
-    outline: none;
-}
-
-.btn_application:hover  .btn_signup:hover
-{
-    cursor: pointer;
-}
-.section_5
+.container_flex
 {
     width: 100%;
-    height:  351px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.section_5_container
-{
-    width: 970px;
-    height:  161px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;   
-}
-
-.section_5-header
-{
-    width: 970px;
-    height:  46px;
-    color: #2acd73;
-    font-family: preconnect;
-    font-size: 42px;
-    text-align: center;
-}
-
-.section_5-header_text
-{
-    width: 970px;
-    height:  36px;
-    font-family: preconnect;
-    color: #a7afb8;
-    font-size: 17px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.cellar
-{
-    width: 100%;
-    height:  575px;
-    background-color: #f6f9fa;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.cellar_container
-{
-    width: 304px;
-    height:  413px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;   
-}
-
-.cellar_container_logo
-{
-    width: 304px;
-    height:  45px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;   
-}
-
-.cellar_container_black
-{
-    width: 95px;
-    height:  45px; 
-}
-
-.cellar_container_partnership
-{
-    width: 228px;
-    height:  28px;
-    color: #000;
-    font-family: preconnect;
-    font-size: 20px;
-    text-align: start; 
-}
-
-.cellar_container_technical-support
-{
-    width: 304px;
-    height:  56px;
-    color: #000;
-    font-family: preconnect;
-    font-size: 20px;
-    display: flex; 
-    justify-content: left;
-    align-items: flex-end;
-}
-
-.cellar_container_social-icons
-{
-    width: 300px;
-    height:  32px;
-    color: #6a6c6f;
-    font-family: preconnect;
-    font-size: 13px;
-    display: flex; 
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-
-.social-icon 
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #6c6c6c;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    text-decoration: none;
-    margin-left: 5px;
-}
-
-.cellar_container_copyright
-{
-    width: 232px;
-    height:  22px;
-    color: #000;
-    font-family: preconnect;
-    font-size: 16px;
-    display: flex; 
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-bottom: 10px; 
-}
-
-.cellar_container_adress
-{
-    width: 304px;
-    height:  66px;
-    color: #000;
-    font-family: preconnect;
-    font-size: 16px;
-    display: flex; 
-    justify-content: flex-start;
-    align-items: flex-start; 
-}
-
-.cellar_container_privacy-policy
-{
-    width: 95px;
-    height:  22px;
-    color: #000;
-    font-family: preconnect;
-    font-size: 16px;
-    display: flex; 
-    justify-content: flex-start;
-    align-items: flex-end;   
-}
-
-.cellar_img-container
-{
-    width: 667px;
-    height:  357px;
-    display: flex; 
-    justify-content: center;
-}
-
-.cellar_img-container_mitting
-{
-    width: 637px;
-    height:  357px; 
+    height: 60px;
 }
